@@ -1,0 +1,9 @@
+FROM golang:alpine3.13
+
+RUN apk add gcc g++ make unzip nodejs yarn
+
+WORKDIR /app
+
+COPY ./src ./app
+
+EXPOSE 4000 3000 3035 9000 3001
